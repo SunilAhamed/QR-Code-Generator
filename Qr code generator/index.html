@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>QR code Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="container">
+        <h1> QR Code Generator </h1>
+        <p>Enter the text or any URL link</p>
+        <div class="generator">
+            <input type="text" placeholder="Enter the text or link" id="texturlgen" >
+            <button id="generateButton">Generate</button>
+        </div>
+        <div class="qr">
+            <img src=" " id="qrimage" alt="first enter the text or link to qr">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for generating QR code using API
+        function generateQR() {
+            var textOrUrl = document.getElementById('texturlgen').value;
+            var apiUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(textOrUrl);
+            document.getElementById('qrimage').src = apiUrl;
+        }
+
+        document.getElementById('generateButton').addEventListener('click', generateQR);
+    </script>
+</body>
+</html>

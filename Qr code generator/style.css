@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #2d2d2d; /* Grey background color */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    height: 45vh;
+    background-color: rgb(243, 252, 255);
+    border-radius: 0; /* Removed border-radius */
+    box-shadow: inset 10px 10px 12px #868686, /* Adjusted box shadow for grey background */
+                10px 10px 12px #000000; /* Adjusted box shadow for grey background */
+}
+
+.container h1 {
+    font-size: 36px; /* Reduced font size */
+    text-align: center;
+    margin-top: 20px; /* Centered the h1 */
+    animation: fadeInDown 1s ease; /* Added animation */
+}
+
+.container p {
+    margin: 10px 15px; /* Adjusted margins */
+    font-size: 20px; /* Reduced font size */
+    text-align: center;
+    font-weight: bold; /* Made it bold */
+    animation: fadeInUp 1s ease; /* Added animation */
+}
+
+.generator input {
+    margin: 15px;
+    margin-top: 4px;
+    width: 350px;
+    height: 40px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    border-radius: 15px; /* Add border radius to input */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    padding-left: 10px; /* Add padding for better appearance */
+}
+
+.generator button {
+    margin: 15px;
+    margin-top: 10px;
+    font-size: 20px;
+    width: 350px;
+    border-radius: 15px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    outline: none; /* Remove button outline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.generator button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.container img {
+    width: 120px;
+    height: 130px;
+    margin-top: 15px;
+    margin-left: 140px; /* Adjusted margin for centering */
+    border: 2px solid black; /* Added border around QR code */
+}
+
+/* Adjusted styles for input and button hover effect */
+.generator input:hover {
+    background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+/* Adjusted styles for input and button focus effect */
+.generator input:focus {
+    border: 2px solid #4CAF50; /* Green border on focus */
+}
+
+/* Adjusted styles for button hover effect */
+.generator button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Animation effects */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
